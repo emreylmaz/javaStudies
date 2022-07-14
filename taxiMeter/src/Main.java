@@ -21,9 +21,12 @@ public class Main {
         ucret = acilis + (yol * taxiMetre);
 
         // Ücret için en düşük değer şartı 20 TL'ye eşitleniyor.
+        /*
         if (ucret <= 20.0){
             ucret = 20;
         }
+        */
+        ucret = (ucret <= 20.0) ? 20.0 : ucret;
 
         // Sonuçları ekrana yazdırılıyor
         System.out.println("Ucretiniz: " + ucret);
